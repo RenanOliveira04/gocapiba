@@ -1,0 +1,64 @@
+.home {
+    background-color: #D1EEF1;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+    overflow: hidden;
+}
+
+.logo,
+.logins {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    text-align: center;
+}
+
+.logo img {
+    height: 250px;
+}
+
+.logo h1 {
+    font-family: "Comfortaa", sans-serif;
+    font-weight: bold;
+    font-size: 40px;
+}
+
+.logo span {
+    color: #777;
+    font-size: 20px;
+    max-width: 250px;
+}
+
+.logins {
+    margin-top: 20px;
+    width: 100%;
+}
+
+.btns {
+    width: 100%;
+    padding: 10px;
+    background-color: #67B5BE;
+    border: 2px solid #498D95;
+    border-bottom: 5px solid #498D95;
+    border-radius: 10px;
+    color: #F5F5F5;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.guestBtn {
+    width: 100%;
+    padding: 10px;
+    font-size: 20px;
+    font-weight: bold;
+    background-color: transparent;
+    border: 2px solid #67B5BE;
+    color: #67B5BE;
+    border-radius: 10px;
+}
