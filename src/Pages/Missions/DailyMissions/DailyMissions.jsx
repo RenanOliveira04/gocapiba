@@ -76,7 +76,7 @@ function DailyMissions({ activeCategory = "all" }) {
 
         const handleMissionSelect = (mission) => {
             if (mission.longitude && mission.latitude) {
-                navigate("/gocapiba/mapa", { state: { mission } });
+                navigate("/gocapiba/desafios", { state: { mission } });
             }
         };
         

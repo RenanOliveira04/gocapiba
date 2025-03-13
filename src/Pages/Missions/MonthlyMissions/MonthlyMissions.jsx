@@ -115,8 +115,10 @@ function MonthlyMissions({ activeCategory = "all" }) {
         ? allMissions
         : allMissions.filter(mission => mission.category === activeCategory);
 
-    const handleMissionSelect = (missionId) => {
-        navigate("/gocapiba/mapa", { state: { selectedMission: missionId } });
+    const handleMissionSelect = (mission) => {
+        if (mission.longitude && mission.latitude) {
+            navigate("/gocapiba/desafios", { state: { mission } });
+        }
     };
 
     return (
@@ -134,7 +136,7 @@ function MonthlyMissions({ activeCategory = "all" }) {
                         <div
                             key={mission.id}
                             className={`mission-card ${mission.completed ? "completed" : ""} ${mission.category}`}
-                            onClick={() => handleMissionSelect(mission.id)}
+                            onClick={() => handleMissionSelect(mission)}
                         >
                             <div className="mission-info">
                                 <h3>{mission.title}</h3>
