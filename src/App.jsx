@@ -13,7 +13,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/gocapiba/mapa" element={<GoCapiba />} />
         <Route path="/gocapiba/desafios" element={<Missions />} />
-        <Route path="/gocapiba/recompensas" element={<Rewards />} />
+        <Route path="/gocapiba/loja" element={<Rewards />} />
       </Routes>
     </BrowserRouter>
   );
