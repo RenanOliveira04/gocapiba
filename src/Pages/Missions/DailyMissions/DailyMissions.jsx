@@ -14,7 +14,9 @@ function DailyMissions({ activeCategory = "all" }) {
             description: "Visite o Marco Zero no Recife Antigo",
             reward: 1,
             completed: false,
-            category: "tourism"
+            category: "tourism",
+            longitude: "-8.062921704745952",
+            latitude: "-34.87125494918955"
         },
         {
             id: 2,
@@ -22,7 +24,9 @@ function DailyMissions({ activeCategory = "all" }) {
             description: "Visite o museu do Paço do Frevo",
             reward: 2,
             completed: false,
-            category: "tourism"
+            category: "tourism",
+            longitude: "-8.061240354998578",
+            latitude: "-34.87151913384772"
         },
         {
             id: 3,
@@ -30,7 +34,9 @@ function DailyMissions({ activeCategory = "all" }) {
             description: "Conheça a famosa rua do Recife Antigo",
             reward: 1,
             completed: true,
-            category: "tourism"
+            category: "tourism",
+            longitude: "-8.06243181845869",
+            latitude: "-34.87152470316405"
         },
         // Missões fitness
         {
@@ -39,7 +45,9 @@ function DailyMissions({ activeCategory = "all" }) {
             description: "Faça uma caminhada de 30 minutos no Parque da Jaqueira",
             reward: 2,
             completed: false,
-            category: "fitness"
+            category: "fitness",
+            longitude: "-8.036711186606723",
+            latitude: "-34.90472517227384"
         },
 
         {
@@ -66,9 +74,12 @@ function DailyMissions({ activeCategory = "all" }) {
         ? allMissions
         : allMissions.filter(mission => mission.category === activeCategory);
 
-    const handleMissionSelect = (missionId) => {
-        navigate("/gocapiba/map", { state: { selectedMission: missionId } });
-    };
+        const handleMissionSelect = (mission) => {
+            if (mission.longitude && mission.latitude) {
+                navigate("/gocapiba/mapa", { state: { mission } });
+            }
+        };
+        
 
     return (
         <div className="daily-missions">
@@ -85,7 +96,7 @@ function DailyMissions({ activeCategory = "all" }) {
                         <div
                             key={mission.id}
                             className={`mission-card ${mission.completed ? "completed" : ""} ${mission.category}`}
-                            onClick={() => handleMissionSelect(mission.id)}
+                            onClick={() => handleMissionSelect(mission)}
                         >
                             <div className="mission-info">
                                 <h3>{mission.title}</h3>
