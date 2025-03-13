@@ -15,8 +15,8 @@ function DailyMissions({ activeCategory = "all" }) {
             reward: 1,
             completed: false,
             category: "tourism",
-            longitude: "-8.062921704745952",
-            latitude: "-34.87125494918955"
+            longitude: -8.062921704745952,
+            latitude: -34.87125494918955
         },
         {
             id: 2,
@@ -25,8 +25,8 @@ function DailyMissions({ activeCategory = "all" }) {
             reward: 2,
             completed: false,
             category: "tourism",
-            longitude: "-8.061240354998578",
-            latitude: "-34.87151913384772"
+            longitude: -8.061240354998578,
+            latitude: -34.87151913384772
         },
         {
             id: 3,
@@ -35,8 +35,8 @@ function DailyMissions({ activeCategory = "all" }) {
             reward: 1,
             completed: true,
             category: "tourism",
-            longitude: "-8.06243181845869",
-            latitude: "-34.87152470316405"
+            longitude: -8.06243181845869,
+            latitude: -34.87152470316405
         },
         // Missões fitness
         {
@@ -46,8 +46,8 @@ function DailyMissions({ activeCategory = "all" }) {
             reward: 2,
             completed: false,
             category: "fitness",
-            longitude: "-8.036711186606723",
-            latitude: "-34.90472517227384"
+            longitude: -8.036711186606723,
+            latitude: -34.90472517227384
         },
 
         {
@@ -74,12 +74,15 @@ function DailyMissions({ activeCategory = "all" }) {
         ? allMissions
         : allMissions.filter(mission => mission.category === activeCategory);
 
-        const handleMissionSelect = (mission) => {
-            if (mission.longitude && mission.latitude) {
-                navigate("/gocapiba/desafios", { state: { mission } });
-            }
-        };
-        
+    const handleMissionSelect = (mission) => {
+        // Verifica se a missão tem coordenadas válidas
+        if (mission.longitude && mission.latitude && mission.longitude !== 0 && mission.latitude !== 0) {
+            console.log("Enviando missão para o mapa:", mission);
+            navigate("/gocapiba/mapa", { state: { mission } });
+        } else {
+            console.warn("Missão sem coordenadas válidas:", mission);
+        }
+    };
 
     return (
         <div className="daily-missions">
@@ -115,4 +118,4 @@ function DailyMissions({ activeCategory = "all" }) {
     );
 }
 
-export default DailyMissions; 
+export default DailyMissions;
