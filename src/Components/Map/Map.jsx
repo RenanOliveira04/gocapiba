@@ -109,6 +109,7 @@ function Map() {
           attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
         />
         <LocationMarker />
+        <MapUpdater center={defaultPosition} zoom={15} />
       </MapContainer>
     </div>
   );

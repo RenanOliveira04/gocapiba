@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
 import "./Rewards.css";
 import Navbar from '../../Components/Navbar/Navbar';
 
