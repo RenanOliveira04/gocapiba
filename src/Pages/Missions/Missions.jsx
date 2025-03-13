@@ -1,9 +1,9 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
 import "./Missions.css";
 import DailyMissions from "./DailyMissions/DailyMissions";
 import WeeklyMissions from "./WeeklyMissions/WeeklyMissions";
 import MonthlyMissions from "./MonthlyMissions/MonthlyMissions";
+import Navbar from '../../Components/Navbar/Navbar';
 
 function Missions() {
     const [activeTab, setActiveTab] = useState("daily");
@@ -26,7 +26,6 @@ function Missions() {
         <div className="missions-container">
             <div className="missions-header">
                 <h1>Missões</h1>
-                <Link to="/gocapiba/mapa" className="back-button">Voltar</Link>
             </div>
 
             <div className="missions-tabs">
@@ -86,6 +85,7 @@ function Missions() {
             <div className="missions-content">
                 {renderMissions()}
             </div>
+            <Navbar />
         </div>
     );
 }

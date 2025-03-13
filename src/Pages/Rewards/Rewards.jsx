@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import "./Rewards.css";
+import Navbar from '../../Components/Navbar/Navbar';
 
 function Rewards() {
     const [activeCategory, setActiveCategory] = useState("all");
@@ -161,7 +162,6 @@ function Rewards() {
                         <span>capibas</span>
                     </div>
                 </div>
-                <Link to="/gocapiba" className="back-button">Voltar</Link>
             </div>
 
             <div className="category-filter">
@@ -264,6 +264,8 @@ function Rewards() {
                     </div>
                 </div>
             )}
+
+            <Navbar />
         </div>
     );
 }

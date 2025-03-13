@@ -15,7 +15,7 @@ function Navbar() {
     }, []);
 
     return (
-        <nav data-aos="fade-up">
+        <nav>
             <Link to="/">
                 <img className="icons" src={homeIcon} alt="home" />
             </Link>
