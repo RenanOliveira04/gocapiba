@@ -1,10 +1,10 @@
 import React from "react";
 import { Outlet, Link } from "react-router-dom";
 
-function Navbar(){
-    return(
+function Navbar() {
+    return (
         <nav>
-            
+
         </nav>
     )
 }
