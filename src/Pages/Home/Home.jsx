@@ -21,13 +21,13 @@ function Home() {
                     </span>
                 </div>
                 <div className="logins">
-                    <Link to="/gocapiba" className="btns" data-aos="fade-left">
+                    <Link to="/gocapiba/mapa" className="btns" data-aos="fade-left">
                         Entrar com gov.br
                     </Link>
-                    <Link to="/gocapiba" className="btns" data-aos="fade-left">
+                    <Link to="/gocapiba/mapa" className="btns" data-aos="fade-left">
                         Entrar com Conecta Login
                     </Link>
-                    <Link to="/gocapiba" className="guestBtn" data-aos="fade-left">
+                    <Link to="/gocapiba/mapa" className="guestBtn" data-aos="fade-left">
                         Entrar como convidado
                     </Link>
                 </div>

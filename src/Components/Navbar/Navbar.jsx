@@ -1,42 +1,38 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
-import "./Navbar.css";
+import AOS from "aos";
+import "aos/dist/aos.css";
+import './Navbar.css';
+import homeIcon from '../../assets/home.png';
+import mapIcon from '../../assets/map.png';
+import swordsIcon from '../../assets/swords.png';
+import userIcon from '../../assets/user.png';
+import marketIcon from '../../assets/market.png';
 
 function Navbar() {
+    useEffect(() => {
+        AOS.init({ duration: 1000, once: true });
+    }, []);
+
     return (
-        <nav className="navbar">
-            <div className="navbar-container">
-                <Link to="/gocapiba" className="navbar-logo">
-                    goCapiba
-                </Link>
-
-                <div className="navbar-menu">
-                    <Link to="/gocapiba" className="navbar-item">
-                        Início
-                    </Link>
-                    <Link to="/gocapiba/missions" className="navbar-item">
-                        Missões
-                    </Link>
-                    <Link to="/gocapiba/rewards" className="navbar-item">
-                        Recompensas
-                    </Link>
-                    <Link to="/gocapiba/map" className="navbar-item">
-                        Mapa
-                    </Link>
-                </div>
-
-                <div className="navbar-user">
-                    <div className="user-coins">
-                        <span className="coin-icon">💰</span>
-                        <span className="coin-amount">120</span>
-                    </div>
-                    <div className="user-avatar">
-                        <span>👤</span>
-                    </div>
-                </div>
-            </div>
+        <nav data-aos="fade-up">
+            <Link to="/">
+                <img className="icons" src={homeIcon} alt="home" />
+            </Link>
+            <Link to="/gocapiba/mapa">
+                <img className="icons" src={mapIcon} alt="mapa" />
+            </Link>
+            <Link to="/gocapiba/desafios">
+                <img className="icons" src={swordsIcon} alt="desafios" />
+            </Link>
+            <Link to="/gocapiba/loja">
+                <img className="icons" src={marketIcon} alt="loja" />
+            </Link>
+            <Link to="/gocapiba/perfil">
+                <img className="icons" src={userIcon} alt="perfil" />
+            </Link>
         </nav>
-    );
+    )
 }
 
 export default Navbar;

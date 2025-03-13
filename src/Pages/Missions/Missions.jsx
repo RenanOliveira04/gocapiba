@@ -26,7 +26,7 @@ function Missions() {
         <div className="missions-container">
             <div className="missions-header">
                 <h1>Missões</h1>
-                <Link to="/gocapiba" className="back-button">Voltar</Link>
+                <Link to="/gocapiba/mapa" className="back-button">Voltar</Link>
             </div>
 
             <div className="missions-tabs">
