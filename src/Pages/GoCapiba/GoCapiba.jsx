@@ -22,10 +22,10 @@ function GoCapiba() {
                         <span>Missões</span>
                     </Link>
 
-                    <div className="menu-option disabled">
+                    <Link to="/gocapiba/rewards" className="menu-option">
                         <div className="option-icon">🏆</div>
                         <span>Recompensas</span>
-                    </div>
+                    </Link>
 
                     <div className="menu-option disabled">
                         <div className="option-icon">👤</div>

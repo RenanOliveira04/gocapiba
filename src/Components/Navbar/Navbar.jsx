@@ -17,6 +17,9 @@ function Navbar() {
                     <Link to="/gocapiba/missions" className="navbar-item">
                         Missões
                     </Link>
+                    <Link to="/gocapiba/rewards" className="navbar-item">
+                        Recompensas
+                    </Link>
                     <Link to="/gocapiba/map" className="navbar-item">
                         Mapa
                     </Link>
