@@ -1,0 +1,15 @@
+[33m8881058[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m Merge branch 'main' of https://github.com/RenanOliveira04/gocapiba
+[33maa525f7[m pequenas mudanças :)
+[33m21af874[m Mapa
+[33m76f8c68[m Adiciona nova rota para o perfil no App e implementa componente MapUpdater para atualização da visualização do mapa.
+[33m0104445[m Atualiza estilos do mapa, corrige ícones de marcadores e implementa lógica para atualização da visualização do mapa com base na localização do usuário. Remove componente Navbar da página Home.
+[33mdd013c1[m Merge branch 'main' of https://github.com/RenanOliveira04/gocapiba
+[33m49177e9[m Atualiza estilos da Navbar, adiciona componente Navbar nas páginas Home, Missões e Recompensas, e ajusta CSS do mapa para evitar sobreposição. Inclui informações de licença no package-lock.json.
+[33mc6671e3[m Ajustando o mapa e desafios
+[33md3d8ab6[m Atualizando o app.jsx
+[33m5a074b0[m código alterado
+[33m6409e0d[m Adiciona nova rota de Recompensas e atualiza a Navbar e a página GoCapiba para incluir a opção de navegação para Recompensas.
+[33mdbc514d[m Implementa Navbar e adiciona estilos CSS, além de criar filtros de categorias para as missões diárias, semanais e mensais.
+[33m77061c6[m Adiciona nova rota para Missões e implementa layout da página GoCapiba com opções de navegação
+[33m50ca164[m front-end
+[33ma399187[m Initialize project using Create React App
