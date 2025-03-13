@@ -116,7 +116,7 @@ function MonthlyMissions({ activeCategory = "all" }) {
         : allMissions.filter(mission => mission.category === activeCategory);
 
     const handleMissionSelect = (missionId) => {
-        navigate("/gocapiba/map", { state: { selectedMission: missionId } });
+        navigate("/gocapiba/mapa", { state: { selectedMission: missionId } });
     };
 
     return (

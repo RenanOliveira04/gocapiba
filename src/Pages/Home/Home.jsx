@@ -4,7 +4,6 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import "./Home.css";
 import logo1 from "../../assets/capivara_1.png";
-import Navbar from '../../Components/Navbar/Navbar';
 
 function Home() {
     useEffect(() => {
@@ -33,7 +32,6 @@ function Home() {
                     </Link>
                 </div>
             </div>
-            <Navbar />
         </div>
     );
 }
