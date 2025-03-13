@@ -4,6 +4,7 @@ import "aos/dist/aos.css";
 import "./Profile.css";
 import capivaraMascote from "../../assets/capivara_1.png";
 import anaAvatar from "../../assets/photo.jpg";
+import Navbar from "../../Components/Navbar/Navbar";
 
 function Profile() {
     const [userLevel] = useState({
@@ -151,6 +152,8 @@ function Profile() {
                     <p>Continue participando para ganhar mais moedas e subir de nível!</p>
                 </div>
             </div>
+
+            <Navbar />
         </div>
     );
 }
