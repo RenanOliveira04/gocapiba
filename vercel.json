@@ -1,18 +1,13 @@
 {
-    "version": 2,
-    "builds": [
-        {
-            "src": "package.json",
-            "use": "@vercel/node",
-            "config": {
-                "installCommand": "npm install --legacy-peer-deps"
-            }
-        }
-    ],
+    "buildCommand": "chmod +x build.sh && ./build.sh",
+    "devCommand": "npm run start",
+    "installCommand": "npm install --legacy-peer-deps",
+    "framework": "create-react-app",
+    "outputDirectory": "build",
     "routes": [
         {
-            "src": "/(.*)",
-            "dest": "/"
+            "source": "/(.*)",
+            "destination": "/index.html"
         }
     ]
 }
