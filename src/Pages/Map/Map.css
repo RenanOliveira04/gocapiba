@@ -1,12 +1,11 @@
 .map-container {
-    position: relative;
+    flex: 1;
+    width: 100%;
     height: calc(100vh - 70px);
-    /* Ajusta a altura para não sobrepor o Navbar */
-    overflow: hidden;
+    display: flex;
 }
 
-.map-container {
-    position: relative;
-    width: 100%;
+.leaflet-container {
     height: 100%;
+    width: 100%;
 }
